@@ -34,6 +34,18 @@ fs.readdir("./commands/", (err, files) => {
 
 });
 
+//Events
+
+bot.on("guildMemberAdd", member => {
+
+    var role = member.guild.roles.cache.get('864771707805892649');
+
+    if(!role) return;
+
+    member.roles.add(role);
+});
+
+
 
 //Opstarten
 
